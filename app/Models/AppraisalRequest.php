@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Notifications\Notification;
 
 /**
  * App\Models\AppraisalRequest
@@ -41,6 +43,8 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  */
 class AppraisalRequest extends Model
 {
+    use Notifiable;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -100,5 +104,15 @@ class AppraisalRequest extends Model
             'appraisalHistories.user',
             'user',
         );
+    }
+
+    /**
+     * Route notifications for the mail channel.
+     *
+     * @return  array<string, string>|string
+     */
+    public function routeNotificationForMail(Notification $notification): array|string
+    {
+        return [$this->customer_email => $this->customer_name];
     }
 }

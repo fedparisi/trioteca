@@ -66,7 +66,18 @@ El proyecto no utiliza Laravel Nova, pero para agregar valor, en lugar de usar B
 
 Para el envío de correos, utilicé MailTrap. He incluido mis credenciales en el archivo .env.example para permitir el envío de correos durante las pruebas. Sin embargo, pueden cambiar esas credenciales por las suyas y verificar que los correos se envían correctamente.
 
-Si se desea desactivar el envío de correos, basta con comentar el observer asociado en el archivo EventServiceProvider. El observer en cuestión es el AppraisalHistoryObserver, que se encuentra en el directorio app/Observers. Este observer maneja los eventos relacionados con el modelo AppraisalHistory y se encarga de ejecutar el envío de correos cuando corresponde, para desactivarlo, simplemente pueden comentar la línea de código donde se registra el observer dentro de EventServiceProvider:
+### Email
+Si se desea desactivar el envío de correos, basta con comentar el observer asociado en el archivo EventServiceProvider. El observer en cuestión es el AppraisalHistoryObserver, que se encuentra en el directorio app/Observers. Simplemente pueden comentar la línea de código donde se registra el observer dentro de EventServiceProvider:
 
+```bash
+ protected $observers = [
+        AppraisalRequest::class => [
+            AppraisalRequestObserver::class,
+        ],
+        // AppraisalHistory::class => [
+        //     AppraisalHistoryObserver::class,
+        // ],
+];
+```
 
 

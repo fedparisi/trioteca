@@ -44,6 +44,6 @@ class AppraisalStatusChanged extends Notification
     {
         return (new MailMessage)
                     ->line('El estado de tu tasación ha cambiado.')
-                    ->line('El nuevo estado es: ' . $this->appraisalHistory->new_status_id);
+                    ->line('El nuevo estado es: ' . $this->appraisalHistory->newStatus->name);
     }
 }

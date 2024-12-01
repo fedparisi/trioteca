@@ -14,9 +14,8 @@ class AppraisalHistoryObserver
     public function created(AppraisalHistory $appraisalHistory): void
     {
         $appraisalRequest = $appraisalHistory->appraisalRequest;
-        $user = $appraisalRequest->user; 
         // Send notification
-        Notification::send($user, new AppraisalStatusChanged($appraisalHistory));
+        Notification::send($appraisalRequest, new AppraisalStatusChanged($appraisalHistory));
     }
 
     /**

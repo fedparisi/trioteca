@@ -60,4 +60,13 @@ yarn install
 yarn run dev
 ```
 
+### Comentarios: 
+
+El proyecto no utiliza Laravel Nova, pero para agregar valor, en lugar de usar Blade, integré un frontend en React. Esto permite desacoplar el backend del frontend, facilitando la comunicación entre ambas aplicaciones separadas y mostrando mi capacidad para utilizar e integrar APIs y gestionarlos proyectos de forma independiente. Además, utilizo Redux y Redux Toolkit Query para el manejo del estado de la aplicación en el frontend, optimizando el rendimiento mediante la caché y evitando solicitudes redundantes al servidor.
+
+Para el envío de correos, utilicé MailTrap. He incluido mis credenciales en el archivo .env.example para permitir el envío de correos durante las pruebas. Sin embargo, pueden cambiar esas credenciales por las suyas y verificar que los correos se envían correctamente.
+
+Si se desea desactivar el envío de correos, basta con comentar el observer asociado en el archivo EventServiceProvider. El observer en cuestión es el AppraisalHistoryObserver, que se encuentra en el directorio app/Observers. Este observer maneja los eventos relacionados con el modelo AppraisalHistory y se encarga de ejecutar el envío de correos cuando corresponde, para desactivarlo, simplemente pueden comentar la línea de código donde se registra el observer dentro de EventServiceProvider:
+
+
 

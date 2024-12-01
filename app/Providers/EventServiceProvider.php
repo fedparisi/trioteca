@@ -19,9 +19,9 @@ class EventServiceProvider extends ServiceProvider
         AppraisalRequest::class => [
             AppraisalRequestObserver::class,
         ],
-        // AppraisalHistory::class => [
-        //     AppraisalHistoryObserver::class,
-        // ],
+        AppraisalHistory::class => [
+            AppraisalHistoryObserver::class,
+        ],
     ];
 
     /**

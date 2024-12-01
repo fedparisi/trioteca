@@ -1,0 +1,37 @@
+.tableContainer {
+    padding: 30px;
+    background-color: #212529; // Fondo oscuro para la tabla
+    border-radius: 8px;
+    color: #fff; // Texto blanco
+
+    .customTable {
+        margin-top: 20px; // Separación superior
+        margin-bottom: 20px; // Separación inferior
+
+        th,
+        td {
+            padding: 16px; // Aumenta el espaciado interno de las celdas
+            vertical-align: middle; // Centra verticalmente el contenido
+        }
+
+        th {
+            background-color: #343a40; // Fondo más oscuro para encabezados
+            color: #f8f9fa; // Texto claro
+            border-color: #454d55; // Bordes oscuros
+            font-weight: bold;
+            text-align: center; // Alineación central del texto en encabezados
+        }
+
+        td {
+            border-color: #454d55; // Bordes oscuros para las celdas
+        }
+
+        tr:hover {
+            background-color: #495057; // Resaltado al pasar el cursor
+        }
+    }
+
+    .mb-4 {
+        color: #adb5bd; // Texto gris claro para mensajes de estado
+    }
+}

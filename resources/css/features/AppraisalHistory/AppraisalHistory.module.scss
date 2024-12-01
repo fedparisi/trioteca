@@ -1,0 +1,38 @@
+
+.welcomeCard {
+
+    .welcomeCardHeader {
+        &>h5 {
+            font-size: 1.8rem;
+
+            // @include media-breakpoint-down(md) {
+            //     font-size: 1rem;
+            // }
+        }
+    }
+
+    .welcomeCardBody {
+        p {
+            font-size: 1.2rem;
+
+            // @include media-breakpoint-down(md) {
+            //     font-size: 0.8rem;
+            // }
+        }
+    }
+
+    // @include media-breakpoint-down(lg) {
+    //     flex-direction: column;
+    //     text-align: center;
+    // }
+}
+
+
+.dashboardIconInfo {
+    width: 4rem !important;
+    height: 4rem !important;
+
+    // @include media-breakpoint-down(xl) {
+    //     display: none !important;
+    // }
+}

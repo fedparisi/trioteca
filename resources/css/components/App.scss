@@ -1,0 +1,57 @@
+@import '~/bootstrap/scss/bootstrap';
+
+
+.section {
+    padding: 1rem 0;
+}
+
+.container-xl.template-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.tabs {
+    &.card-tabs {
+        .nav {
+            padding: 1px;
+            border-bottom: 2px solid $secondary;
+        }
+    }
+}
+
+.alert {
+    font-size: 1rem;
+}
+
+.resource-data-list {
+    list-style: none;
+    padding: 1rem;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    @include media-breakpoint-down(sm) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .resource-data-list__item {
+        padding-left: 0.75rem;
+
+        .resource-data-list__item__label {
+            color: $secondary;
+            font-size: 0.8rem;
+            display: block;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+        }
+
+        .resource-data-list__item__value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: block;
+            line-height: 1.2;
+        }
+    }
+}
+

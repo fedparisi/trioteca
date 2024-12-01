@@ -1,0 +1,30 @@
+// @scss/components/Footer.module.scss
+
+.footer {
+    background-color: #343a40;;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 14px;
+}

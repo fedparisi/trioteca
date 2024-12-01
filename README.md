@@ -9,10 +9,7 @@ Este proyecto está compuesto por un **backend en Laravel** con **Sail** para fa
 Antes de comenzar, asegúrate de tener instalados los siguientes requisitos en tu máquina:
 
 1. **Docker**: [Instalar Docker](https://www.docker.com/get-started)
-2. **Docker Compose**: [Instalar Docker Compose](https://docs.docker.com/compose/install/)
-3. **Node.js y Yarn**: [Instalar Node.js y Yarn](https://yarnpkg.com/getting-started/install)
-4. **Composer**: [Instalar Composer](https://getcomposer.org/download/)
-5. **Git**: [Instalar Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2. **Git**: [Instalar Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## Pasos para la configuración del proyecto
 
@@ -22,12 +19,16 @@ Comienza clonando el repositorio en tu máquina local:
 
 ```bash
 git clone https://github.com/fedparisi/trioteca.git 
-git clone git@github.com:fedparisi/trioteca.git
 ```
 
-2. Instalar dependencias de PHP con Composer
+2. Instalar las dependencias ingresando al container 
 ```bash
-   composer install
+    docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php84-composer:latest \
+    composer install --ignore-platform-reqs
 ```   
 
 3. Configurar el entorno de Laravel con Sail
@@ -52,12 +53,12 @@ cp .env.example .env
 6. Configurar el frontend en React
 (En el directorio raiz)
 ```bash
-yarn install
+./vendor/bin/sail yarn install
 ```
 
 7. Levantar el servidor de desarrollo
 ```bash
-yarn run dev
+./vendor/bin/sail yarn run dev
 ```
 
 ### Comentarios: 

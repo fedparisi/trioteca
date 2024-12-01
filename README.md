@@ -1,4 +1,6 @@
-# Guía de Instalación y Configuración del Proyecto Laravel con Sail y React
+# Proyecto Test Trioteca 
+
+## Guía de Instalación y Configuración del Proyecto Laravel con Sail y React Redux
 
 Este proyecto está compuesto por un **backend en Laravel** con **Sail** para facilitar la ejecución en contenedores Docker, y un **frontend desarrollado en React, con Redux, integrando Redux Toolkit Query para un manejo eficiente de cache**. A continuación se describen los pasos necesarios para levantar y ejecutar el proyecto.
 
@@ -11,8 +13,6 @@ Antes de comenzar, asegúrate de tener instalados los siguientes requisitos en t
 3. **Node.js y Yarn**: [Instalar Node.js y Yarn](https://yarnpkg.com/getting-started/install)
 4. **Composer**: [Instalar Composer](https://getcomposer.org/download/)
 5. **Git**: [Instalar Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
-## URL PROJECT: https://github.com/fedparisi/trioteca
 
 ## Pasos para la configuración del proyecto
 
